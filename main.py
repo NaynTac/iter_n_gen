@@ -100,4 +100,4 @@ def fib_coroutine(g):
 if __name__ == "__main__":
     coro = fib_coroutine(my_coro)
     gen = coro()
-    print(gen.send(-1))
+    print(gen.send(3))
