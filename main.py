@@ -28,7 +28,7 @@ class FibonacciLst():
                 pair = pair[::-1]
                 pair[1] = sum(pair)
 
-            # Возвращаем элемент, принадлежащий
+            # Возвращаем нужный элемент
             if res in pair:
                 self.idx += 1
                 return res
@@ -73,7 +73,7 @@ def fibonacci_generator():
 
 
 def my_coro():
-    """"""
+    """Корутина (сопрограмма)"""
     while True:
         number_of_fib_elem = yield
         fib_list = [0, 1]
@@ -100,4 +100,4 @@ def fib_coroutine(g):
 if __name__ == "__main__":
     coro = fib_coroutine(my_coro)
     gen = coro()
-    print(gen.send(3))
+    print(gen.send(-1))
