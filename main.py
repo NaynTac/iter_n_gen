@@ -95,9 +95,3 @@ def fib_coroutine(g):
         gen.send(None)
         return gen
     return inner
-
-
-if __name__ == "__main__":
-    coro = fib_coroutine(my_coro)
-    gen = coro()
-    print(gen.send(3))
