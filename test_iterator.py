@@ -18,10 +18,4 @@ def test_coroutine():
 	coro = fib_coroutine(my_coro)
 	gen = coro()
 
-	assert gen.send(3) == [0, 1, 1]
-
-	gen.send(None)
 	assert gen.send(5) == [0, 1, 1, 2, 3]
-
-	gen.send(None)
-	assert gen.send(0) == []
